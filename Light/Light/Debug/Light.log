@@ -1,0 +1,10 @@
+﻿  main.cpp
+c:\users\tamim\onedrive\documents\github\behold--the-light\light\external_libraries\include\utility\camera.h(110): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\tamim\onedrive\documents\github\behold--the-light\light\external_libraries\include\utility\camera.h(111): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\tamim\onedrive\documents\github\behold--the-light\light\external_libraries\include\utility\camera.h(118): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\tamim\onedrive\documents\github\behold--the-light\light\external_libraries\include\utility\camera.h(119): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\tamim\onedrive\documents\github\behold--the-light\light\light\main.cpp(39): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\tamim\onedrive\documents\github\behold--the-light\light\light\main.cpp(40): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\tamim\onedrive\documents\github\behold--the-light\light\light\main.cpp(47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\tamim\onedrive\documents\github\behold--the-light\light\light\main.cpp(63): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Light.vcxproj -> C:\Users\tamim\OneDrive\Documents\GitHub\Behold--The-Light\Light\Debug\Light.exe
