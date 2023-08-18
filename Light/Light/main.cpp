@@ -1,8 +1,6 @@
 #include <iostream>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>	
-#include <utility/Camera.h>
-#include <utility/framebuffer.h>
 #include "drawing.h"
 #include "ui.h"
 
@@ -33,51 +31,26 @@ int main() {
 	}
 	glEnable(GL_DEPTH_TEST);
 
-	// Initialize Camera
-	Camera sceneCamera(glm::vec3(0.0f, 0.0f, 0.0f));
-	// Camera variables
-	float lastX = window_width / 2;
-	float lastY = window_height / 2;
-
-	// Create Transformation Matrices
-	glm::mat4 view;
-	glm::mat4 projection;
-
-	// Initialize Scene Buffer
-	FrameBuffer sceneBuffer = FrameBuffer(window_width, window_height);
-
 	// Initialize ImGUI
 	InitializeImGUI(window);
 
-	// Load Models, shaders
-	// models
-	Model nanosuit("resources/models/floor/floor.obj");
-
-	// shaders
-	Shader modelShader("resources/shaders/default.vert", "resources/shaders/default.frag");
+	float colorBuffer[3] = { 1.0f, 1.0f, 1.0f };
 
 	while (!glfwWindowShouldClose(window))
 	{
+		glClearColor(colorBuffer[0], colorBuffer[1], colorBuffer[2], 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		// setup deltaTime
 		float currentFrame = glfwGetTime();
 		deltaTime = currentFrame - lastFrame;
 		lastFrame = currentFrame;
 
-		// process Inputs
-		sceneCamera.processKeyInputs(window, deltaTime);
-		sceneCamera.ProcessMouseMovement(window, lastX, lastY);
-
-		// Setup transformation matrices
-		view = sceneCamera.GetViewMatrix();
-		projection = glm::perspective(glm::radians(45.0f), (float)window_width / window_height, 0.1f, 100.0f);
-
-		// draw models/skybox etc
-		glm::mat4 nanosuitModel(1.0f);
-		drawModel(nanosuit, modelShader, nanosuitModel, view, projection);
-
 		// start imgui frame
 		startImGUIframe();
+
+		ImGui::Begin("clear color");
+		ImGui::ColorEdit3("color", colorBuffer);
+		ImGui::End();
 
 		// render UI
 		renderImGUI();

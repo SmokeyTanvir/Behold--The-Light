@@ -142,7 +142,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\LumeoneEngine\LumeoneEngine\LumeoneEngine\framebuffer.cpp" />
     <ClCompile Include="..\External_Libraries\include\imgui\imgui.cpp" />
     <ClCompile Include="..\External_Libraries\include\imgui\imgui_demo.cpp" />
     <ClCompile Include="..\External_Libraries\include\imgui\imgui_draw.cpp" />
@@ -156,9 +155,15 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="dependencies.h" />
+    <ClInclude Include="..\External_Libraries\include\utility\stb_image.h" />
     <ClInclude Include="drawing.h" />
     <ClInclude Include="ui.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\shaders\model.frag" />
+    <None Include="resources\shaders\model.vert" />
+    <None Include="resources\shaders\light.frag" />
+    <None Include="resources\shaders\light.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

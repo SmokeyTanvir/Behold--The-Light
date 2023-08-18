@@ -72,19 +72,30 @@
     <ClCompile Include="..\External_Libraries\include\imgui\imgui_demo.cpp">
       <Filter>Source Files\imgui</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\LumeoneEngine\LumeoneEngine\LumeoneEngine\framebuffer.cpp">
-      <Filter>Source Files\framebuffers</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ui.h">
       <Filter>Header Files\UI</Filter>
     </ClInclude>
-    <ClInclude Include="dependencies.h">
-      <Filter>Header Files\dependencies</Filter>
-    </ClInclude>
     <ClInclude Include="drawing.h">
       <Filter>Header Files\Drawing</Filter>
     </ClInclude>
+    <ClInclude Include="..\External_Libraries\include\utility\stb_image.h">
+      <Filter>Header Files\dependencies</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\shaders\light.frag">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="resources\shaders\light.vert">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="resources\shaders\model.frag">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="resources\shaders\model.vert">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>
