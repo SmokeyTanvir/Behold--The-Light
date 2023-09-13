@@ -1,3 +1,0 @@
-﻿  main.cpp
-c:\users\tamim\onedrive\documents\github\behold--the-light\light\light\main.cpp(44): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  Light.vcxproj -> C:\Users\tamim\OneDrive\Documents\GitHub\Behold--The-Light\Light\Debug\Light.exe
